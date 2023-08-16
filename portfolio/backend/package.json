@@ -1,0 +1,46 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend for my portfolio website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujchaudhari80/MyPortfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Personal",
+    "website",
+    "Web",
+    "development",
+    "Frontend",
+    "Backend",
+    "Showcase",
+    "Projects",
+    "Design",
+    "Development",
+    "Resume",
+    "Creative",
+    "Mobile",
+    "application",
+    "development",
+    "Android",
+    "development",
+    "ios",
+    "application",
+    "development"
+  ],
+  "author": "Anuj Chaudhari (anujchaudhari80)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anujchaudhari80/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/anujchaudhari80/MyPortfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
