@@ -1,24 +1,21 @@
 const express = require('express');
-const cors = require('cors'); // Optional: For handling cross-origin requests
-
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors()); // Enable CORS if needed
-app.use(express.json()); // Parse JSON requests
+// Serve static files from the React frontend
+app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Routes
-app.get('/api/projects', (req, res) => {
-  // Replace with logic to fetch your projects from a database or other source
-  const projects = [
-    { id: 1, title: 'Project 1', description: 'Description of Project 1' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2' }
-  ];
-  res.json(projects);
+// Sample API route
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Sample data from the server' });
 });
 
-// Start the server
+// Serve the React app for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
